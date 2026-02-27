@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ngô Quốc Thịnh 12A2</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+body{background:#f2f2f2;}
+html{scroll-behavior:smooth;}
+
+/* HEADER */
+.header{
+    background:#e91e63;
+    height:120px;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+}
+
+/* NAV */
+.nav{background:#fff;height:50px;}
+.nav ul{display:flex;list-style:none;height:100%;}
+.nav li{
+    flex:1;
+    position:relative;
+    border-right:1px solid #f5b7c7;
+}
+.nav li a{
+    text-decoration:none;
+    color:#333;
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+}
+.nav li:hover{background:#fde4ec;}
+
+.arrow{margin-left:6px;font-size:12px;}
+
+.submenu{
+    position:absolute;
+    top:50px;
+    left:0;
+    width:220px;
+    background:white;
+    display:flex;
+    flex-direction:column;
+    box-shadow:0 8px 16px rgba(0,0,0,0.15);
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(10px);
+    transition:0.3s;
+    z-index:999;
+}
+.submenu a{
+    padding:12px;
+    border-bottom:1px solid #f3c3d1;
+}
+.submenu a:hover{
+    background:#fde4ec;
+    color:#e91e63;
+}
+.nav li:hover .submenu{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}
+
+/* MAIN */
+.container{display:flex;padding:20px;gap:20px;}
+.main{flex:3;}
+
+.banner{
+    background:#f8bbd0;
+    height:350px;
+    border-radius:5px;
+    margin-bottom:15px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+}
+.box{
+    background:#fce4ec;
+    padding:15px;
+    border-radius:5px;
+    transition:0.3s;
+}
+.box:hover{
+    transform:translateY(-5px);
+    box-shadow:0 6px 14px rgba(0,0,0,0.15);
+}
+
+.sidebar{
+    flex:1;
+    background:#fff;
+    padding:15px;
+    border-radius:5px;
+}
+.notice{
+    background:#fde4ec;
+    padding:10px;
+    margin-bottom:10px;
+    border-radius:5px;
+}
+
+.footer{
+    background:#e91e63;
+    height:80px;
+    margin-top:20px;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:10px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    .container{flex-direction:column}
+    .grid{grid-template-columns:1fr}
+    .nav ul{flex-direction:column;height:auto;}
+    .nav li{height:50px;border-bottom:1px solid #eee;}
+    .submenu{position:static;box-shadow:none;opacity:1;visibility:visible;display:none;}
+    .nav li:hover .submenu{display:flex;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>NGÀNH CÔNG NGHỆ THÔNG TIN</h1>
+    <p>Khám phá – Sáng tạo – Lập trình – Tương lai số</p>
+</div>
+
+<div class="nav">
+<ul>
+
+<li><a href="index.html">Trang chủ</a></li>
+<li><a href="#">Giới thiệu<span class="arrow">▼</span></a>
+<div class="submenu">
+<a href="file t.html">Bản thân</a>
+<a href="file a.html">Ngành công nghệ thông tin</a></li>
+
+<li>
+<a href="#">Nhóm nghề dịch vụ <span class="arrow">▼</span></a>
+<div class="submenu">
+<a href="file-b.html#ktv">Kĩ thuật viên CNTT</a>
+<a href="file-b.html#attt">Kĩ sư An toàn thông tin</a>
+</div>
+</li>
+
+
+<li><a href="file c.html">Nhóm nghề quản trị</a></li>
+<li><a href="file d.html">Nhóm nghề khác</a></li>
+<li><a href="file e.html">Các trường đại học</a></li>
+</div>
+</ul>
+</div>
+
+<div class="container">
+
+<div class="main">
+<div class="banner">
+CHÀO MỪNG BẠN ĐẾN VỚI WEBSITE NGÀNH CNTT
+</div>
+
+<div class="grid">
+<div class="box">
+<h3>Bạn đang tìm hiểu về ngành?</h3>
+<p>Hãy dến với chúng tôi nơi mà bạn có thể tìm hiểu sâu về ngành công nghệ thông tin !!!</p>
+</div>
+
+<div class="box">
+<h3>Bạn đang thắc mắc học công nghệ thông tin thì sau này làm gì?</h3>
+<p>Hãy đến với chúng tôi nơi có thể giới thiệu cho bạn một công việc ưng ý!!!</p>
+</div>
+
+<div class="box">
+<h3>Hãy đến với chúng tôi, nơi thấu hiểu bạn .</h3>
+</div>
+</div>
+</div>
+
+<div class="sidebar">
+<div class="notice">📢 Thông báo lịch học thực hành.</div>
+<div class="notice">📅 Đăng ký CLB Lập trình.</div>
+</div>
+
+</div>
+
+<div class="footer">
+© 2026 - Website Ngô Quốc Thịnh 12A2
+</div>
+
+</body>
+</html>
